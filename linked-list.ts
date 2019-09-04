@@ -58,14 +58,14 @@ export default class DoublyLinkedList<T> {
             prev: undefined
         }
 
-        if(!this.tail){
+        if (!this.tail) {
             this.tail = node;
-        } 
-        if(this.head){
+        }
+        if (this.head) {
             this.head.prev = node;
             node.next = this.head
         }
-        this.head= node;
+        this.head = node;
     }
 
     /**
@@ -84,19 +84,44 @@ export default class DoublyLinkedList<T> {
             return value;
         }
     }
-
-
-
+    /**
+     * Count elements
+     */
     public count(): number {
         let count = 0
         let node: DoublyLinkedListNode<T> | undefined = this.head
-    
+
         while (this.head && node) {
-          count++
-          node = node.next
+            count++
+            node = node.next
         }
         return count
-      }
+    }
 
+    /**
+     * Delete an specific element
+     */
+    public delete(value: T): void {
+        let node = this.head
+        while (node) {
+            if (node.value !== value) {
+                node = node.next
+                continue
+            }
 
+            if (node.prev) {
+                node.prev.next = node.next
+            } else {
+                this.head = node.next
+            }
+
+            if (node.next) {
+                node.next.prev = node.prev
+            } else {
+                this.tail = node.prev
+            }
+
+            break
+        }
+    }
 }

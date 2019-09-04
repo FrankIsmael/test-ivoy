@@ -1,12 +1,10 @@
 import DoublyLinkedList from './linked-list'
 
 describe('DoublyLinkedList', () => {
-  /*
   it('add/extract elements to the end of the list with push/pop', () => {
     const list = new DoublyLinkedList<number>()
     list.push(10)
     list.push(20)
-    //console.log(list)
     expect(list.pop()).toBe(20)
     expect(list.pop()).toBe(10)
   })
@@ -24,7 +22,6 @@ describe('DoublyLinkedList', () => {
     const list = new DoublyLinkedList<number>()
     list.unshift(10)
     list.unshift(20)
-    console.log(list)
     expect(list.shift()).toBe(20)
     expect(list.shift()).toBe(10)
   })
@@ -50,7 +47,7 @@ describe('DoublyLinkedList', () => {
     expect(list.pop()).toBe(50)
     expect(list.shift()).toBe(30)
   })
-*/
+
   it('can count its elements', () => {
     const list = new DoublyLinkedList<number>()
     expect(list.count()).toBe(0)
@@ -59,8 +56,8 @@ describe('DoublyLinkedList', () => {
     list.push(20)
     expect(list.count()).toBe(2)
   })
-/*
-  xit('sets head/tail after popping last element', () => {
+
+  it('sets head/tail after popping last element', () => {
     const list = new DoublyLinkedList<number>()
     list.push(10)
     list.pop()
@@ -69,7 +66,7 @@ describe('DoublyLinkedList', () => {
     expect(list.pop()).toBe(20)
   })
 
-  xit('sets head/tail after shifting last element', () => {
+  it('sets head/tail after shifting last element', () => {
     const list = new DoublyLinkedList<number>()
     list.unshift(10)
     list.shift()
@@ -78,7 +75,7 @@ describe('DoublyLinkedList', () => {
     expect(list.shift()).toBe(20)
   })
 
-  xit('deletes the element with the specified value from the list', () => {
+  it('deletes the element with the specified value from the list', () => {
     const list = new DoublyLinkedList<number>()
     list.push(10)
     list.push(20)
@@ -89,17 +86,17 @@ describe('DoublyLinkedList', () => {
     expect(list.shift()).toBe(10)
   })
 
-  xit('deletes the only element', () => {
+  it('deletes the only element', () => {
     const list = new DoublyLinkedList<number>()
     list.push(10)
     list.delete(10)
     expect(list.count()).toBe(0)
   })
 
-  xit('delete does not modify the list if the element is not found', () => {
+  it('delete does not modify the list if the element is not found', () => {
     const list = new DoublyLinkedList<number>()
     list.push(10)
     list.delete(20)
     expect(list.count()).toBe(1)
-  })*/
+  })
 })
