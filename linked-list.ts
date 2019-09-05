@@ -1,4 +1,4 @@
-export interface DoublyLinkedListNode<T> {
+interface DoublyLinkedListNode<T> {
     value: T
     next?: DoublyLinkedListNode<T>
     prev?: DoublyLinkedListNode<T>
