@@ -7,7 +7,7 @@ interface DoublyLinkedListNode<T> {
 /**
  * Linked list for items of type T
  */
-export default class DoublyLinkedList<T> {
+export default class LinkedList<T> {
     public head?: DoublyLinkedListNode<T> = undefined;
     public tail?: DoublyLinkedListNode<T> = undefined;
 

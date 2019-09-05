@@ -1,12 +1,12 @@
 module.exports = {
   verbose: true,
   projects: [
-    '<rootDir>'
+    '<rootDir>/src'
   ],
   testMatch: [
-    "**/__tests__/**/*.[jt]s?(x)",
-    "**/test/**/*.[jt]s?(x)",
-    "**/?(*.)+(spec|test).[jt]s?(x)"
+    "**/__tests__/**/*.[jt]s?(x)"
+    //"**/test/**/*.[jt]s?(x)",
+    //"**/?(*.)+(spec|test).[jt]s?(x)"
   ],
   testPathIgnorePatterns: [
     '/(?:production_)?node_modules/',
@@ -16,6 +16,6 @@ module.exports = {
     '__mocks__'
   ],
   transform: {
-    '^.+\\.[jt]sx?$': 'ts-jest',
+    '^.+\\.tsx?$': 'ts-jest',
   },
 };
